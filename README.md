@@ -1,5 +1,284 @@
 # Here
 
+## Privacy Requests with Privacy Pal
+
+### Access
+
+<details>
+<summary>Here is an example of the privacy report for access request constructed using Privacy Pal.</summary>
+
+```json
+{
+    "courses": {
+        "SJvci9dYKlq65Z0kvPVe": {
+            "assignments": [
+                {
+                    "dueDate": "2023-12-02T04:59:51.872Z",
+                    "grade": null,
+                    "maxScore": 5,
+                    "name": "Assignment 1",
+                    "optional": false,
+                    "releaseDate": "2023-11-25T01:51:51.871Z"
+                },
+                {
+                    "dueDate": "2023-12-02T04:59:51.872Z",
+                    "grade": null,
+                    "maxScore": 10,
+                    "name": "Assignment 2",
+                    "optional": true,
+                    "releaseDate": "2023-11-25T01:51:51.871Z"
+                },
+                {
+                    "dueDate": "2023-12-16T04:59:51.138Z",
+                    "grade": null,
+                    "maxScore": 10,
+                    "name": "Assignment 3",
+                    "optional": false,
+                    "releaseDate": "2023-12-09T02:18:51.138Z"
+                }
+            ],
+            "surveys": [
+                {
+                    "description": "Please select all the times that you will be available.",
+                    "endTime": "2023-11-19T04:59:34.870Z",
+                    "name": "Section Availability Survey",
+                    "options": [
+                        {
+                            "capacity": 10,
+                            "option": "Tuesday 12:00pm — 2:00pm"
+                        },
+                        {
+                            "capacity": 2,
+                            "option": "Friday 3:00pm — 5:00pm"
+                        },
+                        {
+                            "capacity": 10,
+                            "option": "Sunday 4:00pm — 6:00pm"
+                        }
+                    ],
+                    "responses": null
+                },
+                {
+                    "description": "Please select all the times that you will be available.",
+                    "endTime": "2023-12-02T04:59:12.897Z",
+                    "name": "Testing Data Access",
+                    "options": [
+                        {
+                            "capacity": 15,
+                            "option": "Tuesday 12:00pm — 2:00pm"
+                        },
+                        {
+                            "capacity": 5,
+                            "option": "Friday 3:00pm — 5:00pm"
+                        },
+                        {
+                            "capacity": 15,
+                            "option": "Sunday 4:00pm — 6:00pm"
+                        }
+                    ],
+                    "responses": [
+                        "Tuesday 12:00pm — 2:00pm",
+                        "Sunday 4:00pm — 6:00pm"
+                    ]
+                }
+            ],
+            "swaps": [
+                {
+                    "assignmentID": "",
+                    "handledBy": "",
+                    "handledTime": "2023-11-25T03:08:35.482165Z",
+                    "newSectionID": "sGUN7F3nUdRplIayYjRP",
+                    "oldSectionID": "8UT5u1K9WEeYB5Liyoab",
+                    "reason": "Testing",
+                    "requestTime": "2023-11-25T03:08:35.482162Z",
+                    "status": "approved"
+                }
+            ],
+            "title": "Full Stack at Brown"
+        }
+    },
+    "defaultSections": [
+        {
+            "endTime": "2001-01-01T19:00:00.000Z",
+            "location": "CIT 400",
+            "startTime": "2001-01-01T17:00:00.000Z"
+        }
+    ],
+    "email": "tianren_dong@brown.edu",
+    "isAdmin": true,
+    "name": "Tianren Dong",
+    "notifications": [
+        {
+            "ID": "0c989779-65cb-4892-afd1-0b7d2ee13908",
+            "body": "Your have been assigned to a new section! Please check your schedule.",
+            "timestamp": "2023-11-15T06:45:07.652971Z",
+            "title": "cs0000: New Section Assignment",
+            "type": "New Section Assignment"
+        }
+    ],
+    "photoUrl": "https://lh3.googleusercontent.com/a/AAcHTteNTZOkniLFWHvPd_kAu-91FHfvWDIjgu7M4DNvTccU0W0=s96-c"
+}
+```
+
+</details>
+
+
+### Deletion
+
+<details>
+<summary>Here is an example of the data updated and deleted by fulfilling a deletion request using Privacy Pal.</summary>
+
+```json
+{
+    "documentsToUpdate": [
+        {
+            "Locator": {
+                "LocatorType": "document",
+                "DataType": "survey",
+                "CollectionPath": [
+                    "courses",
+                    "surveys"
+                ],
+                "DocIDs": [
+                    "SJvci9dYKlq65Z0kvPVe",
+                    "Hjesw0E3MNKTMQHd1r97"
+                ],
+                "Filters": null,
+                "Collection": "",
+                "Filter": null
+            },
+            "FieldsToUpdate": {
+                "FirestoreUpdates": [
+                    {
+                        "Path": "responses.taN65OyOdmTm1KyIho1XsWDLKo32",
+                        "FieldPath": null,
+                        "Value": 0
+                    }
+                ],
+                "MongoUpdates": null
+            }
+        },
+        {
+            "Locator": {
+                "LocatorType": "document",
+                "DataType": "survey",
+                "CollectionPath": [
+                    "courses",
+                    "surveys"
+                ],
+                "DocIDs": [
+                    "SJvci9dYKlq65Z0kvPVe",
+                    "gqdBjSG7EBlZGdYJWRh0"
+                ],
+                "Filters": null,
+                "Collection": "",
+                "Filter": null
+            },
+            "FieldsToUpdate": {
+                "FirestoreUpdates": [
+                    {
+                        "Path": "responses.taN65OyOdmTm1KyIho1XsWDLKo32",
+                        "FieldPath": null,
+                        "Value": 0
+                    }
+                ],
+                "MongoUpdates": null
+            }
+        },
+        {
+            "Locator": {
+                "LocatorType": "document",
+                "DataType": "course",
+                "CollectionPath": [
+                    "courses"
+                ],
+                "DocIDs": [
+                    "SJvci9dYKlq65Z0kvPVe"
+                ],
+                "Filters": null,
+                "Collection": "",
+                "Filter": null
+            },
+            "FieldsToUpdate": {
+                "FirestoreUpdates": [
+                    {
+                        "Path": "students.taN65OyOdmTm1KyIho1XsWDLKo32",
+                        "FieldPath": null,
+                        "Value": 0
+                    },
+                    {
+                        "Path": "permissions.taN65OyOdmTm1KyIho1XsWDLKo32",
+                        "FieldPath": null,
+                        "Value": 0
+                    }
+                ],
+                "MongoUpdates": null
+            }
+        },
+        {
+            "Locator": {
+                "LocatorType": "document",
+                "DataType": "section",
+                "CollectionPath": [
+                    "courses",
+                    "sections"
+                ],
+                "DocIDs": [
+                    "SJvci9dYKlq65Z0kvPVe",
+                    "sGUN7F3nUdRplIayYjRP"
+                ],
+                "Filters": null,
+                "Collection": "",
+                "Filter": null
+            },
+            "FieldsToUpdate": {
+                "FirestoreUpdates": [
+                    {
+                        "Path": "numEnrolled",
+                        "FieldPath": null,
+                        "Value": {}
+                    }
+                ],
+                "MongoUpdates": null
+            }
+        }
+    ],
+    "nodesToDelete": [
+        {
+            "LocatorType": "document",
+            "DataType": "swap",
+            "CollectionPath": [
+                "courses",
+                "swaps"
+            ],
+            "DocIDs": [
+                "SJvci9dYKlq65Z0kvPVe",
+                "1CPtuiEinRLbry5bYRQT"
+            ],
+            "Filters": null,
+            "Collection": "",
+            "Filter": null
+        },
+        {
+            "LocatorType": "document",
+            "DataType": "user",
+            "CollectionPath": [
+                "user_profiles"
+            ],
+            "DocIDs": [
+                "taN65OyOdmTm1KyIho1XsWDLKo32"
+            ],
+            "Filters": null,
+            "Collection": "",
+            "Filter": null
+        }
+    ],
+    "writeToDatabase": false
+}
+```
+
+</details>
+
 ## Codebase
 
 The frontend is a React (Next.js) app written in Typescript, while the backend is a REST API written in Go. We also use Firebase Authentication and Firestore.
